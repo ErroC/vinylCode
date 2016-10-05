@@ -10,11 +10,12 @@ namespace web0._1.Controllers
     public class ProductController : Controller
     {
        private  Products product = new Products();
-    
+       
         // GET: Product
         public ActionResult Index()
         {
             return View();
         }
+        
     }
 }
