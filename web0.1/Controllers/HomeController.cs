@@ -18,5 +18,12 @@ namespace web0._1.Controllers
         {
             return View();
         } 
+
+        public ActionResult About_us()
+        {
+            return View();
+        }
+
+    
     }
 }
