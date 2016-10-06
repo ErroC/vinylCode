@@ -108,3 +108,8 @@ nav ul li { float:left;
     .article3 p {
         display:list-item;
     }
+    .center {
+    padding: 70px 0;
+    text-align: center;
+   
+}

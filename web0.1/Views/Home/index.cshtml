@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
 }
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <div id="pic">
 
@@ -18,10 +18,40 @@
     @for (int i = 0; i < 5; i++)
     {
       @*@string name= m.name*@
-          <div class="article3">
+          <div class="article3" id="flip">
            
-            //img src="~/images/nma.png">
-        </div>
-    }
-    </div>
+            @*img src="~/images/nma.png">*@
+             
+                 <img src="~/images/d1.jpg" style="width:100px;height:100px;" />
+        
+             <div id="panel">
+                 <p>
+                    Item Number: <span>125515</span><br />
+                    Size List : <span>8/8.5/9.5/10/11</span><br />
+                    Brand Name: <a href="#">Harman karman</a>
+                 </p>
+              </div>
+          </div>
+    } </div>
 </div>
+<style>
+    #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #ffffff;
+        border: solid 1px #c3c3c3;
+    }
+
+    #panel {
+        padding: 50px;
+        display: none;
+    }
+</style>
+
+<script>
+      $(document).ready(function(){
+           $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+          });
+          });
+</script>

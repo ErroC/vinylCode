@@ -3,5 +3,79 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
 }
+<div class="article3" >
+    <div>
+        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+          
+                <table align="center">
+                    <tr>
+                        <td>
+                            <label for="name">Your name:</label>
+                        </td>
+                        <td><input id="name" class="input" name="name" type="text" value="" size="30" /></td>
+                    </tr>  
+                    <tr>
+                        <td><label for="email">Your email:</label></td>
+                        <td><input id="email" class="input" name="email" type="text" value="" size="30" /></td>
+                    </tr>
+                    <tr>
+                        <td><input id="submit_button" type="submit" value="Send email" /></td>
+                        
+                    </tr>
+                  
+            </div>
+
+           
+            </tr>
+            </table>
+        </form>
+
+    </div>
+
+    <style>
+        #pop {
+            height: 280px;
+            width: 470px;
+            position: fixed;
+            bottom: 50%;
+            right: 50%;
+            border: 12px solid;
+            padding: 10px;
+            background: #ffffff;
+            /*Bored-radius: 9px;*/
+        }
+
+        #close {
+            right: 5;
+            top: 5;
+            float: right;
+        }
+    </style>
+
+    <div id="pop" align="center">
+        <button id="close" onclick="document.getElementById('pop').style.display='none'">
+            X
+        </button>
+        <a> Submitted </a>
+
+        @{
+            if (IsPost)
+            {
+
+                string name = Request.Form["Name"];
+                string email = Request.Form["email"];
+
+                <text>
+                    well done : <br />
+                    Name: @name <br />
+                    Email: @email <br />
+                </text>
+            }
+        }
+    </div>
+
+</div>
+
+
 
 
