@@ -23,7 +23,7 @@ namespace web0._1.Models
             decimal[] price = new decimal[] { 1500, 1600, 1200, 150, 1000, 8000, 999, 150, 950 };
             string[] Desc = new string[] { "This has a 4gig ram memory", "LCD high display and power saver", "20 gig RAM for gamers and extra fans", "Glow in the dark", "high display is power saving", "new high tec display with 3D effects", "bulid in monitor and speakers", "glow in the dark with street art", "Built in eqiupment " };
             string[] imagename = new string[] { "d1.jpg", "d2.jpg", "d3.jpg", "d4.jpg", "d5.jpg", "d6.jpg", "d7.jpg", "d8.jpg", "d9.jpg" };
-            for (int i = 0; i < name.Length; i++)
+            for (int i = 0; i < 9; i++)
             {
                 product[i].ProductName = name[i];
                 product[i].ProductDesc = Desc[i];
