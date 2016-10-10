@@ -103,13 +103,19 @@ nav ul li { float:left;
     .article3 image, p {
         position:relative;
         display:inline;
+   
+        
     }
 
     .article3 p {
-        display:list-item;
+        display:inline;
+      
+
+     
     }
     .center {
     padding: 70px 0;
     text-align: center;
    
 }
+
