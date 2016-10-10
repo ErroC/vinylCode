@@ -124,6 +124,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\d1.jpg" />
+    <Content Include="images\d10.jpg" />
+    <Content Include="images\d11.jpg" />
     <Content Include="images\d2.jpg" />
     <Content Include="images\d3.jpg" />
     <Content Include="images\d4.jpg" />
