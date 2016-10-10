@@ -92,27 +92,29 @@ nav ul li { float:left;
            float:right;
            border:1px solid #000000;
 }
-.article3 {
+
+
+/*.article3 {
          position:relative  ;
          border:1px solid #000000;
          width:93%;
          height :25%;
          margin: 6px 6px;
          
-}
-    .article3 image, p {
+}*/
+    /*.article3 image, p {
         position:relative;
         display:inline;
    
         
-    }
+    }*/
 
-    .article3 p {
+    /*.article3 p {
         display:inline;
       
 
      
-    }
+    }*/
     .center {
     padding: 70px 0;
     text-align: center;
