@@ -1,19 +1,21 @@
-﻿$(document).ready(function () {
-
+﻿$(document).ready(function call(val) {
     $("p").hide();
+
     $("#inner").click(function () {
-        $(this).next().slideToggle(1000, function () {
-            $("p").next().slideToggle(1000)
+        $(this).next().slideToggle(3000, function () {
+            $(this).next().slideToggle(3000)
         });
-        
-        
-            //$("#p2").hide();
-            //$("#inner").click(function () {
-            //    $(this).next().slideToggle(300);
-            //});
-
-       
-
     });
-
 });
+
+function info() {
+    document.getElementById("image").scr = "";
+};
+
+function showinfo(val) {
+   
+    document.getElementById(val).click(
+        $("."+val).slideToggle(3000)
+
+    );
+};

@@ -2,49 +2,119 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
+    object[] pro = new object[9];
+    int count = 0;
+
+    var testing = pro[count];
+
+
 }
 <h1>Product Page</h1>
 
 <div id="pic">
 
     <div class="article1">
-        @*the would have a slide show*@
-        <p>this would be the name of the company</p>
-        <p>this would be the company vision</p>
-        <p>this would be the mission</p>
+     
     </div>
 
     <div class="article2">
-        @*@foreach (var item in Model.GetValues())
-        {
-            <div class="article3" >
-            
-                <span class="image" id="inner"><img src="~/images/@Html.DisplayFor(modelItem => item.image)" style="width:100px;height:100px" /></span>
-            
-                <p id="p2">@Html.DisplayFor(modelItem => item.ProductName)</p>
-                <p id="p2">R @Html.DisplayFor(modelItem => item.ProductPrice)</p>
+  
+        @*@foreach (var items in Model.GetValues())
+            {
+                var id = items.ProductId;
+
+            <div class="article3">
+                <span class="image" id="inner" onclick="show()"><img src="~/images/@Html.DisplayFor(item=>items.image)" style="width:100px;height:100px" /></span>
+                <p id="p2" >@Html.DisplayFor(item=> items.ProductName  )</p>
+                <p id="p2">R @Html.DisplayFor(item => items.ProductPrice)</p>
 
             </div>
         }*@
+        
+            <div class="article3">
+                <span class="image" id="inner1" onclick="showinfo('inner1')"><img src="~/images/d1.jpg" style="width:100px;height:100px" ></span>
+                <p class="inner1" >testing</p>
+                <p class="inner1">testing</p>
+            </div>
 
-        @for (int i = 0; i < 9; i++)
-        {
+        <div class="article3">
+            <span class="image" id="inner2" onclick="showinfo('inner2')"><img src="~/images/d2.jpg" style="width:100px;height:100px"></span>
+            <p class="inner2">testing2</p>
+            <p class="inner2">testing 2</p>
+        </div>
 
-        }
+        <div class="article3">
+            <span class="image" id="inner3" onclick="showinfo('inner3')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
+            <p class="inner3">testing 3</p>
+            <p class="inner3">testing 3</p>
+        </div>
 
+        <div class="article3">
+            <span class="image" id="inner4" onclick="showinfo('inner4')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
+            <p class="inner4">testing 3</p>
+            <p class="inner4">testing 3</p>
+        </div>
+
+        <div class="article3">
+            <span class="image" id="inner5" onclick="showinfo('inner5')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
+            <p class="inner5">testing 3</p>
+            <p class="inner5">testing 3</p>
+        </div>
+        
 
     </div>
 </div>
 
 
-<script type="text/javascript" >
-    $(document).ready(function () {
-        ("#p2").hide();
-        $("#inner").click(function () {
-            $(this).next().slideToggle(300);
-        });
+@*<script type="text/javascript" >*@
+    @*//$(document).ready(function () {
+    //    ("p").hide();
 
-    });
+    //    function showinfo() {
+    //        $("#inner").onclick(function () {
+    //            $("p").slideToggle(1000);
+    //        });
 
-</script>
 
+    //    };
+       
+    //});*@
+   
+
+@*</script>*@
+
+@*@foreach (var item in Model.GetValues())
+    {
+        <div class="article3" >
+
+            <span class="image" id="inner"><img src="~/images/@Html.DisplayFor(modelItem => item.image)" style="width:100px;height:100px" /></span>
+
+            <p id="p2">@Html.DisplayFor(modelItem => item.ProductName)</p>
+            <p id="p2">R @Html.DisplayFor(modelItem => item.ProductPrice)</p>
+
+        </div>
+
+    }*@
+
+@*===============================*@
+@*@for (int i = 0; i < 9; i++)
+        {
+            @Model.Valuestest(i);
+           <div class="article3">
+
+          <span class="image" id="inner"><img src="~/images/@Html.DisplayFor(modelItem => Model.tempImage)" style="width:100px;height:100px" /></span>
+          <p id="p2">@Html.DisplayFor(modelItem =>Model.tempname )</p>
+          <p id="p2">R @Html.DisplayFor(modelItem => Model.tempprice)</p>
+
+      </div>
+    }*@
+@*===============================*@
+@*@for (int i = 0; i < 9; i++)
+    {
+        Model.Valuestest(i);
+       <div class="article3">
+       <span><img class="inner">@Html.DisplayFor(model => model.tempImage)</span>
+       <p id="p2"> @Html.DisplayFor(model => model.tempname)</p>
+       <p id="p2">@Html.DisplayFor(model => model.tempprice)</p>
+        </div>
+    }*@

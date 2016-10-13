@@ -10,12 +10,15 @@ namespace web0._1.Controllers
     public class ProductController : Controller
     {
         ViewModel vw = new ViewModel();
-        Products[] pro = new Products[9]; 
+        Products[] pro = new Products[9];
         // GET: Product
         public ActionResult Index()
         {
+            // vw.Getvaule(1,pro); 
+            //vw.Valuestest(1); 
             vw.names(pro);
-            
+            vw.GetValues();
+          
             return View(vw);
         }
         
