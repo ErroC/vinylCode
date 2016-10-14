@@ -109,3 +109,40 @@
     background-color: white;
     color: #000000;
 }
+
+
+
+
+#info
+{
+       border-style: solid;
+    float: right;
+    width: 322.5px;
+    height: 762px;
+    text-align: center;
+    margin-top: 0px;
+    
+
+}
+
+
+
+
+
+
+
+#subHAbout
+{
+     border-style: solid;
+    width: auto;
+    height: 765px;
+    text-align: center;
+    margin-top: 422px;
+}
+
+#firstH
+{
+    transform: rotate(-89deg) translateX(-30%);
+    margin-left: -1212px;
+    margin-top: -233px;
+}
