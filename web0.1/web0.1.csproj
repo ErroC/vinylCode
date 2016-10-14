@@ -123,6 +123,7 @@
     <Content Include="Content\testing.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\Congratulations.jpg" />
     <Content Include="images\d1.jpg" />
     <Content Include="images\d10.jpg" />
     <Content Include="images\d11.jpg" />
