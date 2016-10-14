@@ -8,14 +8,24 @@
     });
 });
 
-function info() {
-    document.getElementById("image").scr = "";
-};
 
 function showinfo(val) {
    
     document.getElementById(val).click(
-        $("."+val).slideToggle(3000)
+        $("." + val).slideToggle(3000)
+        
 
     );
 };
+
+function changeimage(val,val2) {
+    document.getElementById("maini").src = "/images/" + val;
+    changedisplay(val2);
+};
+
+function changedisplay(val) {
+    var number=Math.floor(Math.random()*11)+1;
+    var name ="d"+number.toString()+".jpg";
+    document.getElementById(val).src="/image/"+name;
+}
+

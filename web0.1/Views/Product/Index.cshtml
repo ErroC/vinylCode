@@ -14,57 +14,64 @@
 <div id="pic">
 
     <div class="article1">
+        <span><img id="maini" src="~/images/d11.jpg" style="width:350px;height:350px"></span>
      
     </div>
 
     <div class="article2">
   
-        @*@foreach (var items in Model.GetValues())
-            {
-                var id = items.ProductId;
-
             <div class="article3">
-                <span class="image" id="inner" onclick="show()"><img src="~/images/@Html.DisplayFor(item=>items.image)" style="width:100px;height:100px" /></span>
-                <p id="p2" >@Html.DisplayFor(item=> items.ProductName  )</p>
-                <p id="p2">R @Html.DisplayFor(item => items.ProductPrice)</p>
-
-            </div>
-        }*@
-        
-            <div class="article3">
-                <span class="image" id="inner1" onclick="showinfo('inner1')"><img src="~/images/d1.jpg" style="width:100px;height:100px" ></span>
+                <span class="image" onclick="changeimage('d1.jpg', 'inner1');"><img id="inner1" src="~/images/d1.jpg" style="width:100px;height:100px" ></span>
                 <p class="inner1" >testing</p>
                 <p class="inner1">testing</p>
             </div>
 
         <div class="article3">
-            <span class="image" id="inner2" onclick="showinfo('inner2')"><img src="~/images/d2.jpg" style="width:100px;height:100px"></span>
+            <span class="image" onclick="changeimage('d2.jpg', 'inner2');"><img  id="inner2" src="~/images/d2.jpg" style="width:100px;height:100px"></span>
             <p class="inner2">testing2</p>
             <p class="inner2">testing 2</p>
         </div>
 
         <div class="article3">
-            <span class="image" id="inner3" onclick="showinfo('inner3')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
+            <span class="image" onclick="changeimage('d3.jpg', 'inner3');"><img  id="inner3" src="~/images/d3.jpg" style="width:100px;height:100px"></span>
             <p class="inner3">testing 3</p>
             <p class="inner3">testing 3</p>
         </div>
 
         <div class="article3">
-            <span class="image" id="inner4" onclick="showinfo('inner4')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
-            <p class="inner4">testing 3</p>
-            <p class="inner4">testing 3</p>
+            <span class="image" onclick="changeimage('d4.jpg', 'inner4');"><img id="inner4" src="~/images/d4.jpg" style="width:100px;height:100px"></span>
+            <p class="inner4">testing 4</p>
+            <p class="inner4">testing 4</p>
         </div>
 
         <div class="article3">
-            <span class="image" id="inner5" onclick="showinfo('inner5')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
-            <p class="inner5">testing 3</p>
-            <p class="inner5">testing 3</p>
+            <span class="image" onclick="changeimage('d5.jpg', 'inner5');"><img  id="inner5" src="~/images/d5.jpg" style="width:100px;height:100px"></span>
+            <p class="inner5">testing 5</p>
+            <p class="inner5">testing 5</p>
         </div>
         
 
     </div>
 </div>
 
+@*@foreach (var items in Model.GetValues())
+        {
+            var id = items.ProductId;
+
+        <div class="article3">
+            <span class="image" id="inner" onclick="show()"><img src="~/images/@Html.DisplayFor(item=>items.image)" style="width:100px;height:100px" /></span>
+            <p id="p2" >@Html.DisplayFor(item=> items.ProductName  )</p>
+            <p id="p2">R @Html.DisplayFor(item => items.ProductPrice)</p>
+
+        </div>
+    }*@
+
+@*<script type="text/javascript">
+    function changeimage(val){
+       @*var pic= document.getElementById(".image").src="~/images/"+@Model.GetPic(val) ;
+       document.getElementById(".maini").src="~/images/"+val;
+        };
+</script>*@
 
 @*<script type="text/javascript" >*@
     @*//$(document).ready(function () {
@@ -77,7 +84,7 @@
 
 
     //    };
-       
+       remember yesterday when i was talking 
     //});*@
    
 
