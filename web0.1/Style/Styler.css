@@ -1,6 +1,4 @@
 ﻿
-
-
 #article2
 { 
            width:35%;
@@ -133,12 +131,14 @@
 
 #subHAbout
 {
-     border-style: solid;
+    border-style: solid;
     width: auto;
     height: 765px;
     text-align: center;
     margin-top: 422px;
 }
+
+
 
 #firstH
 {
@@ -146,3 +146,59 @@
     margin-left: -1212px;
     margin-top: -233px;
 }
+
+
+
+
+
+.header
+{
+height:60px;
+background-color: white;
+
+
+}
+
+    .header ul 
+    {
+        list-style:none; /*removes dots*/
+
+    }
+
+
+
+     .header ul li a         /*lines the menu from left to right*/
+    {
+        float : left;
+        text-decoration : none;
+        color : black;
+        padding: 11px 40px;
+        text-align : center;
+        line-height : 42px;
+        height:auto;
+
+    }
+
+
+
+
+
+     .header ul li a:hover       /*hover effect*/
+    {
+        background-color: gold;  
+        color:rebeccapurple;
+
+    }
+
+
+
+
+
+   .header ul li a.active       /*hover when pressed*/
+  {
+        background-color:darkslateblue ; 
+        border-radius: 8px; 
+        color:darkkhaki;
+
+
+  }
