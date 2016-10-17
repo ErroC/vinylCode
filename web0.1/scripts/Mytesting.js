@@ -1,5 +1,5 @@
 ﻿$(document).ready(function call(val) {
-    $("p").hide();
+    $("").hide();
 
     $("#inner").click(function () {
         $(this).next().slideToggle(3000, function () {
@@ -25,7 +25,11 @@ function changeimage(val,val2) {
 
 function changedisplay(val) {
     var number=Math.floor(Math.random()*11)+1;
-    var name ="d"+number.toString()+".jpg";
-    document.getElementById(val).src="/image/"+name;
-}
+    var name ="d"+number+".jpg";
+    document.getElementById(val).src = "/images/" + name;
+};
 
+function  Getinfor(){
+
+    return 0;
+};

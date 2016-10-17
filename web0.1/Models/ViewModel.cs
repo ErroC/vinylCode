@@ -59,17 +59,17 @@ namespace web0._1.Models
         {
             return product[i]; 
         }
-        public object  Valuestest(int i)
-        {
+        //public object  Valuestest(int i)
+        //{
             
-             var testing = value.ElementAt<Products>(i);
-             tempname=testing.ProductName;
-            tempImage=testing.image;
-            tempprice=testing.ProductPrice ;
-             tempdesc=testing.ProductDesc ;
-            tempid =testing.ProductId;
-            return testing;
-        }
+        //     var testing = value.ElementAt<Products>(i);
+        //     tempname=testing.ProductName;
+        //    tempImage=testing.image;
+        //    tempprice=testing.ProductPrice ;
+        //     tempdesc=testing.ProductDesc ;
+        //    tempid =testing.ProductId;
+        //    return testing;
+        //}
 
         public string GetNames(int i)
         {
@@ -89,6 +89,16 @@ namespace web0._1.Models
         public string GetPic(int i)
         {
             return imagename[i]; 
+        }
+
+        public void getValuesfor(int i)
+        {
+            var testing = value.ElementAt<Products>(i);
+            tempname = testing.ProductName;
+            tempImage = testing.image;
+            tempprice = testing.ProductPrice;
+            tempdesc = testing.ProductDesc;
+            tempid = testing.ProductId;
         }
     }
 

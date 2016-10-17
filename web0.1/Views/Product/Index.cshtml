@@ -3,11 +3,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
     object[] pro = new object[9];
-    int count = 0;
+    int count = 9;
 
-    var testing = pro[count];
-
-
+    var name = new string[9];
+    var desc = new string[9];
+    var price = new decimal[9];
+    var imag = new string[9];
+    int x=1;
+    string temp;
 }
 <h1>Product Page</h1>
 
@@ -19,40 +22,34 @@
     </div>
 
     <div class="article2">
-  
-            <div class="article3">
-                <span class="image" onclick="changeimage('d1.jpg', 'inner1');"><img id="inner1" src="~/images/d1.jpg" style="width:100px;height:100px" ></span>
-                <p class="inner1" >testing</p>
-                <p class="inner1">testing</p>
+@for (int i = 0; i < 5; i++)
+{
+
+    string pic = Model.GetPic(i);
+    temp = "inner" + x;
+    x++;
+        <div class="article3">
+            
+                <span class="image" onclick="changeimage('@pic','@temp')"><img id=@temp src="~/images/@Model.GetPic(i)" style="width:100px;height:100px" ></span>
+                <p class=@temp>@Model.GetNames(i)</p>
+                <p class=@temp>R:@Model.GetPrice(i)</p>
             </div>
 
-        <div class="article3">
-            <span class="image" onclick="changeimage('d2.jpg', 'inner2');"><img  id="inner2" src="~/images/d2.jpg" style="width:100px;height:100px"></span>
-            <p class="inner2">testing2</p>
-            <p class="inner2">testing 2</p>
-        </div>
+}
 
-        <div class="article3">
-            <span class="image" onclick="changeimage('d3.jpg', 'inner3');"><img  id="inner3" src="~/images/d3.jpg" style="width:100px;height:100px"></span>
-            <p class="inner3">testing 3</p>
-            <p class="inner3">testing 3</p>
-        </div>
-
-        <div class="article3">
-            <span class="image" onclick="changeimage('d4.jpg', 'inner4');"><img id="inner4" src="~/images/d4.jpg" style="width:100px;height:100px"></span>
-            <p class="inner4">testing 4</p>
-            <p class="inner4">testing 4</p>
-        </div>
-
-        <div class="article3">
-            <span class="image" onclick="changeimage('d5.jpg', 'inner5');"><img  id="inner5" src="~/images/d5.jpg" style="width:100px;height:100px"></span>
-            <p class="inner5">testing 5</p>
-            <p class="inner5">testing 5</p>
-        </div>
-        
 
     </div>
 </div>
+@*<div class="test projects">
+    @for (int i = 0; i < 9; i++)
+    {
+
+        Model.getValuesfor(i) ;
+        Model.GetPic(i);
+
+    }
+
+</div>*@
 
 @*@foreach (var items in Model.GetValues())
         {
@@ -125,3 +122,28 @@
        <p id="p2">@Html.DisplayFor(model => model.tempprice)</p>
         </div>
     }*@
+@*============================================need to keep==============================*@
+
+@*<div class="article3">
+    <span class="image" onclick="changeimage('d2.jpg', 'inner2');"><img id="inner2" src="~/images/d2.jpg" style="width:100px;height:100px"></span>
+    <p class="inner2"></p>
+    <p class="inner2"> </p>
+</div>
+
+<div class="article3">
+    <span class="image" onclick="changeimage('d3.jpg', 'inner3');"><img id="inner3" src="~/images/d3.jpg" style="width:100px;height:100px"></span>
+    <p class="inner3">  </p>
+    <p class="inner3"></p>
+</div>
+
+<div class="article3">
+    <span class="image" onclick="changeimage('d4.jpg', 'inner4');"><img id="inner4" src="~/images/d4.jpg" style="width:100px;height:100px"></span>
+    <p class="inner4"> </p>
+    <p class="inner4"> </p>
+</div>
+
+<div class="article3">
+    <span class="image" onclick="changeimage('d5.jpg', 'inner5');"><img id="inner5" src="~/images/d5.jpg" style="width:100px;height:100px"></span>
+    <p class="inner5"></p>
+    <p class="inner5">  </p>
+</div>*@
