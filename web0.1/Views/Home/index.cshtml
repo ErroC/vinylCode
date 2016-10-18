@@ -1,7 +1,10 @@
-﻿@model web0._1.Models.Products 
+﻿@model web0._1.Models.ViewModel  
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
+    int x = 1;
+    string temp;
+  
 }
 <h1>Welcome</h1>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -12,7 +15,7 @@
 <form action="/products/index" id="fontsForm">
     
     <input type="hidden" id="page" name="page">
-  
+
     <div id="pic">
 
         <div class="article1">
@@ -68,37 +71,20 @@
         </div>
 
             <div class="article2">
+@for (int i = 0; i < 9; i++)
+{
+    string pic2 = Model.GetPic(i);
+    temp = "show" + x;
+    x++;
+
 
                 <div class="article3">
-                    <span class="image" id="inner1" onclick="showinfo('inner1')"><img src="~/images/d1.jpg" style="width:100px;height:100px"></span>
-                    <p class="inner1">testing</p>
-                    <p class="inner1">testing</p>
+                  
+                     <span class="image" onclick="showinfo('@temp')"><img id=@temp src="~/images/@Model.GetPic(i)"style="width:100px;height:100px" ></span>
+                    <p class=@temp>@Model.GetNames(i)</p>
+                    <p class=@temp>R:@Model.GetPrice(i)</p>
                 </div>
-
-                <div class="article3">
-                    <span class="image" id="inner2" onclick="showinfo('inner2')"><img src="~/images/d2.jpg" style="width:100px;height:100px"></span>
-                    <p class="inner2">testing2</p>
-                    <p class="inner2">testing 2</p>
-                </div>
-
-                <div class="article3">
-                    <span class="image" id="inner3" onclick="showinfo('inner3')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
-                    <p class="inner3">testing 3</p>
-                    <p class="inner3">testing 3</p>
-                </div>
-
-                <div class="article3">
-                    <span class="image" id="inner4" onclick="showinfo('inner4')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
-                    <p class="inner4">testing 3</p>
-                    <p class="inner4">testing 3</p>
-                </div>
-
-                <div class="article3">
-                    <span class="image" id="inner5" onclick="showinfo('inner5')"><img src="~/images/d3.jpg" style="width:100px;height:100px"></span>
-                    <p class="inner5">testing 3</p>
-                    <p class="inner5">testing 3</p>
-                </div>
-
+}
             </div>
         </div>
 
