@@ -6,16 +6,14 @@
     string temp;
   
 }
-<h1>Welcome</h1>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link href="~/Style/Styler.css" rel="stylesheet">
 
 <form action="/products/index" id="fontsForm">
-    
     <input type="hidden" id="page" name="page">
-
+    <h1>LPE STORE</h1>
     <div id="pic">
 
         <div class="article1">
@@ -30,35 +28,35 @@
                 <div class="w3-display-container mySlides">
                     <img src="~/images/d8.jpg" style="width:784px;height:398px;">
                     <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-                       Technology ,Innovation
+                        Technology ,Innovation
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="~/images/d10.jpg" style="width:783px;height:398px;">
                     <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-                       descount when you buy over R5000.,25% off
+                        descount when you buy over R5000.,25% off
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="~/images/d8.jpg" style="width:783px;height:398px;">
                     <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-                       first parchase 50% descount on next parchase
+                        first parchase 50% descount on next parchase
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="~/images/d4.jpg" style="width:783px;height:398px;">
                     <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
-                        The is no limit in technology  
+                        The is no limit in technology
                     </div>
                 </div>
 
                 <div class="w3-display-container mySlides">
                     <img src="~/images/d8.jpg" style="width:783px;height:398px;">
                     <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-                       online its the future
+                        online its the future
                     </div>
                 </div>
 
@@ -70,25 +68,27 @@
 
         </div>
 
-            <div class="article2">
-@for (int i = 0; i < 9; i++)
-{
-    string pic2 = Model.GetPic(i);
-    temp = "show" + x;
-    x++;
+        <div class="article2">
+            @for (int i = 0; i < 9; i++)
+            {
+                string pic2 = Model.GetPic(i);
+                temp = "show" + x;
+                x++;
 
 
                 <div class="article3">
-                  
-                     <span class="image" onclick="showinfo('@temp')"><img id=@temp src="~/images/@Model.GetPic(i)"style="width:100px;height:100px" ></span>
+
+                    <span class="image" onclick="showinfo('@temp')"><img id=@temp src="~/images/@Model.GetPic(i)" style="width:100px;height:100px"></span>
                     <p class=@temp>@Model.GetNames(i)</p>
                     <p class=@temp>R:@Model.GetPrice(i)</p>
                 </div>
-}
-            </div>
+            }
         </div>
+    </div>
+   
 
- <script type="">
+
+    <script type="">
         var slideIndex = 1;
         showDivs(slideIndex);
 

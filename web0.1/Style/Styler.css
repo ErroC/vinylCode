@@ -1,4 +1,6 @@
 ﻿
+
+
 #article2
 { 
            width:35%;
@@ -131,20 +133,21 @@
 
 #subHAbout
 {
+
     border-style: solid;
-    width: auto;
+    width: 782px;
+
     height: 765px;
     text-align: center;
     margin-top: 422px;
 }
 
-
-
 #firstH
 {
-    transform: rotate(-89deg) translateX(-30%);
-    margin-left: -1212px;
-    margin-top: -233px;
+
+    transform: rotate(-90deg) translateX(-328px);
+    margin-left: -761px;
+    margin-top: -250px;
 }
 
 

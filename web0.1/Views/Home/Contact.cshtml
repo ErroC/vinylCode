@@ -8,22 +8,21 @@
 <html>
 <head>
     <style>
-/* The Modal (background) */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 
-/* Modal Content */
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -80,32 +79,46 @@
     </style>
 </head>
 <body>
+    <div class="article1" style="align-items:center">
+        <span><img id="maini" src="~/images/contact-us.png" style="width:785px;height:400px;align-content:center"></span>
+    </div>
+    <div class="article2">
+        <p><h1> Contact Us</h1></p>
 
-    <div>
-        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
 
-            <table align="center">
-                <tr>
-                    <td>
-                        <label for="name">Your name:</label>
-                    </td>
-                    <td><input id="name" class="input" name="name" type="text" value="" size="30" /></td>
-                </tr>
-                <tr>
-                    <td><label for="email">Your email:</label></td>
-                    <td><input id="email" class="input" name="email" type="text" value="" size="30" /></td>
-                </tr>
-                <tr>
-                    <td><input id="submit_button" type="submit" value="Send email" /></td>
+        <div>
+            <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
 
-                </tr>
-                </form>
-        <table></table>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <label for="name">Your name:</label>
+                        </td>
+                        <td><input id="name" class="input" name="name" type="text" value="" size="30" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Your email:</label></td>
+                        <td><input id="email" class="input" name="email" type="text" value="" size="30" /></td>
+                    </tr>
+                    <tr>
+                        <td><input id="submit_button" type="submit" value="Send email" /></td>
+
+                    </tr>
+            </form>
+            <table></table>
+
+        </div>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" align="center">confirm details</button>
+
+
+
+
+
 
     </div>
 
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn" align="center" >Display your details</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -118,15 +131,13 @@
                     @{
                         if (IsPost)
                         {
-                            var result = "";
+                           
                             string name = Request.Form["Name"];
                             string email = Request.Form["email"];
                             var userData = name + "," + email
                              + Environment.NewLine;
 
-                            var dataFile = Server.MapPath("~/App_Data/data.txt");
-                            File.AppendAllText(dataFile, userData);
-                            result = "Information saved.";
+                            
 
                                 <text>
                                     well done : <br />
@@ -148,26 +159,18 @@
     </div>
 
     <script>
-// Get the modal
+
 var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
 btn.onclick = function() {
     modal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -178,77 +181,6 @@ window.onclick = function(event) {
 </body>
 </html>
 
-@*<div class="article3" >
-    <div>
-        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-          
-                <table align="center">
-                    <tr>
-                        <td>
-                            <label for="name">Your name:</label>
-                        </td>
-                        <td><input id="name" class="input" name="name" type="text" value="" size="30" /></td>
-                    </tr>  
-                    <tr>
-                        <td><label for="email">Your email:</label></td>
-                        <td><input id="email" class="input" name="email" type="text" value="" size="30" /></td>
-                    </tr>
-                    <tr>
-                        <td><input id="submit_button" type="submit" value="Send email" /></td>
-                        
-                    </tr>
-                  
-            </div>
-
-           
-            </tr>
-            </table>
-        </form>
-
-    </div>
-
-    <style>
-        #pop {
-            height: 280px;
-            width: 470px;
-            position: fixed;
-            bottom: 50%;
-            right: 50%;
-            border: 12px solid;
-            padding: 10px;
-            background: #ffffff;
-            /*Bored-radius: 9px;*/
-        }
-
-        #close {
-            right: 5;
-            top: 5;
-            float: right;
-        }
-    </style>
-
-    <div id="pop" align="center">
-        <button id="close" onclick="document.getElementById('pop').style.display='none'">
-X</button>
-        <a> Submitted </a>
-
-        @{
-            if (IsPost)
-            {
-
-                string name = Request.Form["Name"];
-                string email = Request.Form["email"];
-
-                <text>
-                    well done : <br />
-                    Name: @name <br />
-                    Email: @email <br />
-                </text>
-            }
-        }
-    </div>
-
-</div>*@
 
 
 
