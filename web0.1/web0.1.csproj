@@ -125,6 +125,7 @@
     <Content Include="Global.asax" />
     <Content Include="images\aboutus.jpg" />
     <Content Include="images\Congratulations.jpg" />
+    <Content Include="images\contact-us.png" />
     <Content Include="images\d1.jpg" />
     <Content Include="images\d10.jpg" />
     <Content Include="images\d11.jpg" />
@@ -136,6 +137,8 @@
     <Content Include="images\d7.jpg" />
     <Content Include="images\d8.jpg" />
     <Content Include="images\d9.jpg" />
+    <Content Include="images\pl.jpg" />
+    <Content Include="images\pf.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />

@@ -6,72 +6,123 @@
 <h1>About us</h1>
 <div class="article1" style="align-items:center">
     @*the would have a slide show*@
-    <span><img id="maini" src="~/images/aboutus.jpg" style="width:785px;height:400px;align-content:center"></span>
+    <span><img src="~/images/aboutus.jpg" style="width:785px;height:400px;align-content:center"></span>
 </div>
 <div class="article2">
-   <p><h1> Contact Us</h1></p>
+    <h1>
+        About us
+    </h1>
+    <p>
+        LPE store its a new business started in 2016 may by pelle , pfariso and errol.
+        we are also programmers of the website.
+    </p>
+    <h1>Developers</h1>
 
+    <div class="article3" id="tray1">
+        <span><img src="~/images/pl.jpg" style="width:100px;height:100px"></span>
+        <div id="panel">
+           <p>Lepelle Sishibe  developer at dvt and studied at Tshwane university of technology </p>
+        </div>
+    </div>
+    <div class="article3" id="tray2">
+        <span><img src="~/images/pf.jpg" style="width:100px;height:100px"></span>
+        <div id="panel2">
+            <p>Pfariso Budeli developer at dvt and studied at Tshwane university of technology </p>
 
+        </div>
+    </div>
+    <div class="article3" id="tray3">
+        <span><img src="~/images/aboutus.jpg" style="width:100px;height:100px"></span>
+        <div id="panel3">
+            <p>Errol chabalala  developer at dvt and studied at  university of south africa</p>
+        </div>
 
-
-
-
-
-
+    </div>
 </div>
 
 
+@*<div id="subHAbout">
+
+        <div id="info">
+
+            <h3 style="margin-top:0px;">  We believe that good design is powerful, hard work is essential, and exploring the unknown is important.</h3>
 
 
- 
+            <hr style="width:229px; margin-top:40px;">
 
-
-
-
-
-<div id="subHAbout">
-
-
-
-
-
-    <div id="info">
-
-        <h3 style="margin-top:0px;">  We believe that good design is powerful, hard work is essential, and exploring the unknown is important.</h3>
-
-
-        <hr style="width:229px; margin-top:40px;">
-
-        <p>Generally what we do</p>
-
-
-    </div>
-
-
-    <hr style="width:229px; margin-top:139px;">
-
-    <div id="firstH">
-        service
-    </div>
-
-
-
-    <div id="firstH">
-        Process
-    </div>
-
-
-
-    <div id="firstH">
-       Team
-    </div>
-
-
-
+            <p>Generally what we do</p>
 
 
         </div>
-   
+
+
+        <hr style="width:229px; margin-top:139px;">
+
+        <div id="firstH">
+            service
+        </div>
 
 
 
+        <div id="firstH">
+            Process
+        </div>
+
+
+
+        <div id="firstH">
+            Team
+        </div>
+    </div>
+
+        </div>*@
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header" align="center">
+            <span class="close">×</span>
+            <h2>
+                <img id="maini" src="~/images/Congratulations.jpg" style="width:20%;height:20%" /><br />
+
+            </h2>
+
+        </div>
+
+        <div class="modal-footer">
+            <h3>contact ours  : admin@lpe.co.za </h3>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
