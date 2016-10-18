@@ -137,6 +137,7 @@
     <Content Include="images\d7.jpg" />
     <Content Include="images\d8.jpg" />
     <Content Include="images\d9.jpg" />
+    <Content Include="images\er.jpg" />
     <Content Include="images\pl.jpg" />
     <Content Include="images\pf.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
