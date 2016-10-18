@@ -27,11 +27,13 @@ function changedisplay(val) {
     var number=Math.floor(Math.random()*11)+1;
     var name ="d"+number+".jpg";
     document.getElementById(val).src = "/images/" + name;
+    Getinfor(number);
+   
 };
 
-function  Getinfor(){
+function  Getinfor(val){
 
-    return 0;
+
 };
 
 

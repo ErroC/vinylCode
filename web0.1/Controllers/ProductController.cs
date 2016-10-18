@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using web0._1.Models;
@@ -21,6 +22,19 @@ namespace web0._1.Controllers
           
             return View(vw);
         }
+
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id==null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    if (pro[id].ProductId==null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View();
+        //}
         
     }
 }

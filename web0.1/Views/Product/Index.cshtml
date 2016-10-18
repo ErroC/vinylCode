@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
     object[] pro = new object[9];
-    int count = 9;
+    //int count = 9;
 
     var name = new string[9];
     var desc = new string[9];
@@ -11,6 +11,8 @@
     var imag = new string[9];
     int x=1;
     string temp;
+    string newid;
+    string newid2;
 }
 <h1>Product Page</h1>
 
@@ -27,6 +29,8 @@
 
     string pic = Model.GetPic(i);
     temp = "inner" + x;
+    newid = "somethingId" + x;
+    newid2 = "something" + x;
     x++;
 
            <div class="article3">
@@ -41,6 +45,12 @@
 
     </div>
 </div>
+<script type="text/javascript">
+    function changeInfo(val,val2,val3) {
+        var text=document.getElementById(val).innerHTML=@Model.GetNames(val3);
+        var text2=document.getElementById(val2).innerHTML=@Model.GetPrice(val3);
+    }
+</script>
 @*<div class="test projects">
     @for (int i = 0; i < 9; i++)
     {
@@ -124,27 +134,3 @@
         </div>
     }*@
 @*============================================need to keep==============================*@
-
-@*<div class="article3">
-    <span class="image" onclick="changeimage('d2.jpg', 'inner2');"><img id="inner2" src="~/images/d2.jpg" style="width:100px;height:100px"></span>
-    <p class="inner2"></p>
-    <p class="inner2"> </p>
-</div>
-
-<div class="article3">
-    <span class="image" onclick="changeimage('d3.jpg', 'inner3');"><img id="inner3" src="~/images/d3.jpg" style="width:100px;height:100px"></span>
-    <p class="inner3">  </p>
-    <p class="inner3"></p>
-</div>
-
-<div class="article3">
-    <span class="image" onclick="changeimage('d4.jpg', 'inner4');"><img id="inner4" src="~/images/d4.jpg" style="width:100px;height:100px"></span>
-    <p class="inner4"> </p>
-    <p class="inner4"> </p>
-</div>
-
-<div class="article3">
-    <span class="image" onclick="changeimage('d5.jpg', 'inner5');"><img id="inner5" src="~/images/d5.jpg" style="width:100px;height:100px"></span>
-    <p class="inner5"></p>
-    <p class="inner5">  </p>
-</div>*@
