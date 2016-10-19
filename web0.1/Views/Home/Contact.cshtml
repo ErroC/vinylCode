@@ -79,6 +79,9 @@
     </style>
 </head>
 <body>
+    <h1>
+        Contact Us
+    </h1>
     <div class="article1" style="align-items:center">
         <span><img id="maini" src="~/images/contact-us.png" style="width:785px;height:400px;align-content:center"></span>
     </div>
@@ -125,32 +128,33 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <div class="modal-header"  align="center">
+            <div class="modal-header" align="center">
                 <span class="close">×</span>
-                <h2> <img src="~/images/Congratulations.jpg" style="width:20%;height:20%" /><br />
+                <h2>
+                    <img src="~/images/Congratulations.jpg" style="width:20%;height:20%" /><br />
                     @{
                         if (IsPost)
                         {
-                           
+
                             string name = Request.Form["Name"];
                             string email = Request.Form["email"];
                             var userData = name + "," + email
                              + Environment.NewLine;
 
-                            
 
-                                <text>
-                                    well done : <br />
-                                    Name: @name <br />
-                                    Email: @email <br />
-                                </text>
+
+                            <text>
+                                well done : <br />
+                                Name: @name <br />
+                                Email: @email <br />
+                            </text>
 
                         }
                     }
                 </h2>
 
             </div>
-           
+
             <div class="modal-footer">
                 <h3>contact ours  : admin@lpe.co.za </h3>
             </div>
@@ -160,22 +164,22 @@
 
     <script>
 
-var modal = document.getElementById('myModal');
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-span.onclick = function() {
-    modal.style.display = "none";
-}
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
 
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 
 </body>

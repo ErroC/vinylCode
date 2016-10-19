@@ -33,3 +33,15 @@ function  Getinfor(){
 
     return 0;
 };
+
+
+
+function bigImg(x) {
+    x.style.height = "303px";
+    x.style.width = "427px";
+}
+
+function normalImg(x) {
+    x.style.height = "150px";
+    x.style.width = "150px";
+}

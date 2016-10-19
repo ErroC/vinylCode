@@ -188,7 +188,7 @@ background-color: white;
 
      .header ul li a:hover       /*hover effect*/
     {
-        background-color: gold;  
+        background-color: rgba(0,0,0,0.2);  
         color:rebeccapurple;
 
     }
