@@ -1,4 +1,5 @@
-﻿$(document).ready(function call(val) {
+﻿var value;
+$(document).ready(function call(val) {
     $("").hide();
 
     $("#inner").click(function () {
@@ -18,25 +19,37 @@ function showinfo(val) {
     );
 };
 
-function changeimage(val,val2) {
+function changeimage(val,val2,val3) {
     document.getElementById("maini").src = "/images/" + val;
     changedisplay(val2);
+    value = val3;
 };
 
 function changedisplay(val) {
     var number=Math.floor(Math.random()*11)+1;
     var name ="d"+number+".jpg";
     document.getElementById(val).src = "/images/" + name;
-    Getinfor(number);
+ 
    
 };
+function move() {
 
-function  Getinfor(val){
+    return value;
+};
 
+
+function getids(p) {
+
+    $("#"+p).val(value);
+
+    alert($("#"+p).val());
+    $("#ProductForm").submit();
+ 
 
 };
 
 
+<<<<<<< HEAD
 
 function bigImg(x) {
     x.style.height = "303px";
@@ -47,3 +60,5 @@ function normalImg(x) {
     x.style.height = "150px";
     x.style.width = "150px";
 }
+=======
+>>>>>>> worked on the product detail page

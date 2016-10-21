@@ -22,19 +22,23 @@ namespace web0._1.Controllers
           
             return View(vw);
         }
+    //    [HttpPost]
+        public ActionResult Details(int? Productid)
+        {
+            vw.names(pro);
+            
+            int testing = Convert.ToInt32(Productid);
+            var pros = vw.GetValues().ElementAt(testing);
 
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id==null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    if (pro[id].ProductId==null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View();
-        //}
-        
+            if (pros == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(pros);
+            }
+        }
+
     }
 }

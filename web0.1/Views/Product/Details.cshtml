@@ -4,24 +4,31 @@
     Layout = "~/Views/shared/_Layout.cshtml";
 }
 
-<h2>Product Details</h2>
-
+<h2>Selected Porduct Details</h2>
 <div class="article1">
     <span><img id="maini" src="~/images/@Model.image" style="width:785px;height:400px;align-content:center"></span>
 </div>
 
 
 <div class="article2">
-  <div class="article3">
-    <p>@Model.ProductName</p>
-  </div>
-  <div class="article3">
-    <p>@Model.ProductId</p>
-  </div>
-  <div class="article3">
-    <p>@Model.ProductDesc</p>
-  </div>
-  <div class="article3">
-    <p>@Model.ProductPrice</p>
-  </div>
+    <div class="article3">
+        <h2>Product ID</h2>
+        <p>@Model.ProductId</p>
+    </div>
+
+    <div class="article3">
+        <h2>Product name</h2>
+        <p>@Model.ProductName</p>
+    </div>
+
+   <div class="article3">
+       <h2>Product Price</h2>
+       <p>R: @Model.ProductPrice</p>
+       </div>
+
+            <div class="article3">
+                <h2>Product description</h2>
+                <p>@Model.ProductDesc</p>
+            </div>
 </div>
+

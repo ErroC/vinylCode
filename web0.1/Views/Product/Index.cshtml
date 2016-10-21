@@ -14,123 +14,37 @@
     string newid;
     string newid2;
 }
-<h1>Product Page</h1>
 
-<div id="pic">
+<form action="/Product/Details" id="ProductForm">
+    <input type="hidden" id="Productid" name="Productid" />
+    <h1>Product Page</h1>
 
-    <div class="article1">
-        <span><img id="maini" src="~/images/d4.jpg" style="width:785px;height:400px;align-content:center"></span>
-     
+    <div id="pic">
+
+        <div class="article1">
+            <span onclick="getids('Productid')"><img id="maini" src="~/images/d4.jpg" style="width:785px;height:400px;align-content:center"></span>
+      
+        </div>
+        
+        <div class="article2">
+            @for (int i = 0; i < 5; i++)
+            {
+
+                string pic = Model.GetPic(i);
+                temp = "inner" + x;
+                newid = "somethingId" + x;
+                newid2 = "something" + x;
+                x++;
+
+                <div class="article3">
+
+                    <span class="image" onclick="changeimage('@pic','@temp',@x)"><img id=@temp src="~/images/@Model.GetPic(i)" style="width:100px;height:100px"></span>
+                    <p class=@temp>@Model.GetNames(i)</p>
+                    <p class=@temp>R:@Model.GetPrice(i)</p>
+                </div>
+
+            }
+        </div>
     </div>
+</form>
 
-    <div class="article2">
-       @for (int i = 0; i < 5; i++)
-{
-
-    string pic = Model.GetPic(i);
-    temp = "inner" + x;
-    newid = "somethingId" + x;
-    newid2 = "something" + x;
-    x++;
-
-           <div class="article3">
-            
-                <span class="image" onclick="changeimage('@pic','@temp')"><img id=@temp src="~/images/@Model.GetPic(i)"style="width:100px;height:100px" ></span>
-                <p class=@temp>@Model.GetNames(i)</p>
-                <p class=@temp>R:@Model.GetPrice(i)</p>
-            </div>
-
-}
-
-
-    </div>
-</div>
-<script type="text/javascript">
-    function changeInfo(val,val2,val3) {
-        var text=document.getElementById(val).innerHTML=@Model.GetNames(val3);
-        var text2=document.getElementById(val2).innerHTML=@Model.GetPrice(val3);
-    }
-</script>
-@*<div class="test projects">
-    @for (int i = 0; i < 9; i++)
-    {
-
-        Model.getValuesfor(i) ;
-        Model.GetPic(i);
-
-    }
-
-</div>*@
-
-@*@foreach (var items in Model.GetValues())
-        {
-            var id = items.ProductId;
-
-        <div class="article3">
-            <span class="image" id="inner" onclick="show()"><img src="~/images/@Html.DisplayFor(item=>items.image)" style="width:100px;height:100px" /></span>
-            <p id="p2" >@Html.DisplayFor(item=> items.ProductName  )</p>
-            <p id="p2">R @Html.DisplayFor(item => items.ProductPrice)</p>
-
-        </div>
-    }*@
-
-@*<script type="text/javascript">
-    function changeimage(val){
-       @*var pic= document.getElementById(".image").src="~/images/"+@Model.GetPic(val) ;
-       document.getElementById(".maini").src="~/images/"+val;
-        };
-</script>*@
-
-@*<script type="text/javascript" >*@
-    @*//$(document).ready(function () {
-    //    ("p").hide();
-
-    //    function showinfo() {
-    //        $("#inner").onclick(function () {
-    //            $("p").slideToggle(1000);
-    //        });
-
-
-    //    };
-       remember yesterday when i was talking 
-    //});*@
-   
-
-@*</script>*@
-
-@*@foreach (var item in Model.GetValues())
-    {
-        <div class="article3" >
-
-            <span class="image" id="inner"><img src="~/images/@Html.DisplayFor(modelItem => item.image)" style="width:100px;height:100px" /></span>
-
-            <p id="p2">@Html.DisplayFor(modelItem => item.ProductName)</p>
-            <p id="p2">R @Html.DisplayFor(modelItem => item.ProductPrice)</p>
-
-        </div>
-
-    }*@
-
-@*===============================*@
-@*@for (int i = 0; i < 9; i++)
-        {
-            @Model.Valuestest(i);
-           <div class="article3">
-
-          <span class="image" id="inner"><img src="~/images/@Html.DisplayFor(modelItem => Model.tempImage)" style="width:100px;height:100px" /></span>
-          <p id="p2">@Html.DisplayFor(modelItem =>Model.tempname )</p>
-          <p id="p2">R @Html.DisplayFor(modelItem => Model.tempprice)</p>
-
-      </div>
-    }*@
-@*===============================*@
-@*@for (int i = 0; i < 9; i++)
-    {
-        Model.Valuestest(i);
-       <div class="article3">
-       <span><img class="inner">@Html.DisplayFor(model => model.tempImage)</span>
-       <p id="p2"> @Html.DisplayFor(model => model.tempname)</p>
-       <p id="p2">@Html.DisplayFor(model => model.tempprice)</p>
-        </div>
-    }*@
-@*============================================need to keep==============================*@
