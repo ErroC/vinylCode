@@ -1,5 +1,4 @@
-﻿var value;
-$(document).ready(function call(val) {
+﻿$(document).ready(function call(val) {
     $("").hide();
 
     $("#inner").click(function () {
@@ -19,34 +18,24 @@ function showinfo(val) {
     );
 };
 
-function changeimage(val,val2,val3) {
+
+
+function changeimage(val,val2) {
     document.getElementById("maini").src = "/images/" + val;
     changedisplay(val2);
-    value = val3;
 };
 
 function changedisplay(val) {
     var number=Math.floor(Math.random()*11)+1;
     var name ="d"+number+".jpg";
     document.getElementById(val).src = "/images/" + name;
- 
-   
-};
-function move() {
-
-    return value;
 };
 
+function  Getinfor(){
 
-function getids(p) {
-
-    $("#"+p).val(value);
-
-    alert($("#"+p).val());
-    $("#ProductForm").submit();
- 
-
+    return 0;
 };
+
 
 
 
@@ -60,4 +49,3 @@ function normalImg(x) {
     x.style.height = "150px";
     x.style.width = "150px";
 }
-
