@@ -41,6 +41,24 @@
                     <span class="image" onclick="changeimage('@pic','@temp',@x)"><img id=@temp src="~/images/@Model.GetPic(i)" style="width:100px;height:100px"></span>
                     <p class=@temp>@Model.GetNames(i)</p>
                     <p class=@temp>R:@Model.GetPrice(i)</p>
+                    <br />
+
+                    <input id="sweetsim" type="button" value="Add to Cart" />
+                    <p>price R300</p>
+
+
+
+                    <ul id="listOutput">
+                        <!--li-->
+                    </ul>
+
+                    <p>Total: R<span id="total">0</span>.00</p>
+                    <br>
+
+                    
+
+
+
                 </div>
 
             }
