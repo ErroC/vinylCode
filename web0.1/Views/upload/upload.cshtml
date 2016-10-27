@@ -13,9 +13,9 @@
         
         <ol>
             <li>
-                @Html.LabelFor(m => m.Name)
-                @Html.TextBoxFor(m => m.Name, new { maxlength = 50 })
-                @Html.ValidationMessageFor(m => m.Name)
+                @Html.LabelFor(m => m.productName)
+                @Html.TextBoxFor(m => m.productName, new { maxlength = 50 })
+                @Html.ValidationMessageFor(m => m.productName)
             </li>
             <li>
                 @Html.LabelFor(m => m.description)
@@ -24,7 +24,7 @@
             </li>
             <li>
                 @Html.LabelFor(m => m.price)
-                @Html.TextBoxFor(m => m.price, new { maxlength = 50 })
+                @Html.TextBoxFor(m => m.price)
                 @Html.ValidationMessageFor(m => m.price)
             </li>
             <li class="lifile">

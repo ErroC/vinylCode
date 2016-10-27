@@ -10,7 +10,7 @@ namespace web0._1.Models
     {
         [Required(ErrorMessage = "Please Enter Your Full Name")]
         [Display(Name = "Product Name")]
-        public string Name { get; set; }
+        public string productName { get; set; }
 
         [Required(ErrorMessage = "Please Enter discription ")]
         [Display(Name = "product disc")]
@@ -19,8 +19,8 @@ namespace web0._1.Models
 
         [Required(ErrorMessage = "Please Enter price ")]
         [Display(Name = "product price")]
-        [MaxLength(99999)]
-        public double price { get; set; }
+        [RegularExpression(@"^\d+(\.\d{1,2})?$")]
+        public decimal price { get; set; }
 
         [Required(ErrorMessage = "Please Upload File")]
         [Display(Name = "Upload File")]

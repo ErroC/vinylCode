@@ -23,7 +23,7 @@ namespace web0._1.Controllers
             {
                 //TO:DO
                 var fileName = Path.GetFileName(mRegister.file.FileName);
-                var path = Path.Combine(Server.MapPath("~/images"), fileName);
+                var path = Path.Combine(Server.MapPath("~/Content/Upload"), fileName);
                 mRegister.file.SaveAs(path);
                 ViewBag.Message = "File has been uploaded successfully";
                 ModelState.Clear();
