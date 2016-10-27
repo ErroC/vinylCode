@@ -136,8 +136,8 @@
                         if (IsPost)
                         {
 
-                            string name = Request.Form["Name"];
-                            string email = Request.Form["email"];
+                            string names = Request.Form["Name"];
+                            string emails = Request.Form["email"];
                             var userData = name + "," + email
                              + Environment.NewLine;
 
@@ -145,8 +145,8 @@
 
                             <text>
                                 well done : <br />
-                                Name: @name <br />
-                                Email: @email <br />
+                                Name: @names <br />
+                                Email: @emails <br />
                             </text>
 
                         }
