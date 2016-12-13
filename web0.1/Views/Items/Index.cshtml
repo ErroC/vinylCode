@@ -26,8 +26,8 @@
             <td>
                 |
                 @*@Html.ActionLink("Items", "Delete", new { id = item.Product.Pro_id })*@
-                <button onclick="location.href='@Url.Action("Items","Add", new {id=item.Product.Pro_id})'">Delete</button>
-                <button onclick="location.href='@Url.Action("Items","Add", new {id=item.Product.Pro_id })'">Add Quauntity</button>
+                <button onclick="location.href='@Url.Action("Delete","Items", new {id=item.Product.Pro_id})'">Delete</button>
+                <button onclick="location.href='@Url.Action("Add","Items", new {id=item.Product.Pro_id })'">Add Quauntity</button>
             </td>
         </tr>
         total += Convert.ToDecimal(item.Quantity * item.Product.Pro_price);
