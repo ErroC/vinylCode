@@ -11,24 +11,17 @@ namespace web0._1.Controllers
     public class ProductController : Controller
     {
         ViewModel vw = new ViewModel();
-        Products[] pro = new Products[9];
+        
         // GET: Product
         public ActionResult Index()
         {
-            // vw.Getvaule(1,pro); 
-            //vw.Valuestest(1); 
-            vw.names(pro);
-            vw.GetValues();
-          
             return View(vw);
         }
     //    [HttpPost]
         public ActionResult Details(int? Productid)
         {
-            vw.names(pro);
-            
-            int testing = Convert.ToInt32(Productid);
-            var pros = vw.GetValues().ElementAt(testing);
+
+            var pros = vw.product.Where(o => o.Pro_id == Productid).FirstOrDefault();
 
             if (pros == null)
             {

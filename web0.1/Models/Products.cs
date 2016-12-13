@@ -7,10 +7,10 @@ namespace web0._1.Models
 {
     public class Products
     {
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
-        public decimal ProductPrice { get; set; }
-        public string ProductDesc { get; set; }
-        public string image { get; set; }
+        public int Pro_id { get; set; }
+        public string Pro_Name { get; set; }
+        public decimal Pro_price { get; set; }
+        public string Pro_desc { get; set; }
+        public string Image_name { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿$(document).ready(function call(val) {
+﻿var value;
+$(document).ready(function call(val) {
     $("").hide();
 
     $("#inner").click(function () {
@@ -10,36 +11,42 @@
 
 
 function showinfo(val) {
-   
+
     document.getElementById(val).click(
         $("." + val).slideToggle(3000)
-        
+
 
     );
 };
 
-
-
-function changeimage(val,val2) {
+function changeimage(val, val2, val3) {
     document.getElementById("maini").src = "/images/" + val;
     changedisplay(val2);
+    value = val3;
 };
 
 function changedisplay(val) {
-    var number=Math.floor(Math.random()*11)+1;
-    var name ="d"+number+".jpg";
+    var number = Math.floor(Math.random() * 11) + 1;
+    var name = "d" + number + ".jpg";
     document.getElementById(val).src = "/images/" + name;
+
+
+};
+function move() {
+
+    return value;
 };
 
-function  Getinfor(){
 
-    return 0;
+function getids(p) {
+
+    $("#" + p).val(value);
+    
+    alert($("#" + p).val());
+    $("#ProductForm").submit();
+
+
 };
-
-
-
-
-
 function bigImg(x) {
     x.style.height = "303px";
     x.style.width = "427px";

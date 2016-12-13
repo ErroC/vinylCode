@@ -2,17 +2,9 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
-    object[] pro = new object[9];
-    //int count = 9;
-
-    var name = new string[9];
-    var desc = new string[9];
-    var price = new decimal[9];
-    var imag = new string[9];
     int x=1;
-    string temp;
-    string newid;
-    string newid2;
+    string temp="";
+
 }
 
 <form action="/Product/Details" id="ProductForm">
@@ -27,41 +19,20 @@
         </div>
         
         <div class="article2">
-            @for (int i = 0; i < 5; i++)
-            {
-
-                string pic = Model.GetPic(i);
-                temp = "inner" + x;
-                newid = "somethingId" + x;
-                newid2 = "something" + x;
-                x++;
-
-                <div class="article3">
-
-                    <span class="image" onclick="changeimage('@pic','@temp',@x)"><img id=@temp src="~/images/@Model.GetPic(i)" style="width:100px;height:100px"></span>
-                    <p class=@temp>@Model.GetNames(i)</p>
-                    <p class=@temp>R:@Model.GetPrice(i)</p>
-                    <br />
-
-                    <input id="sweetsim" type="button" value="Add to Cart" />
-                    <p>price R300</p>
+     @foreach (var item in Model.product)
+     {
+        temp = "inner" + x;
+        <div class="article3">
+            <span class="image" onclick="changeimage('@item.Image_name','@temp',@x)"><img id=@temp src="~/images/@item.Image_name" style="width:100px;height:100px"></span>
+            <p class=@temp>@item.Pro_Name</p>
+            <p class=@temp>R:@item.Pro_price</p>
+        </div>
+        <br />
+       
+         x++;
+     }
 
 
-
-                    <ul id="listOutput">
-                        <!--li-->
-                    </ul>
-
-                    <p>Total: R<span id="total">0</span>.00</p>
-                    <br>
-
-                    
-
-
-
-                </div>
-
-            }
         </div>
     </div>
 </form>
