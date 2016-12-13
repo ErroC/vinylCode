@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/shared/_Layout.cshtml";
-    var total = 0;
+    decimal total = 0;
 }
 @using web0._1.Models
 
@@ -15,7 +15,7 @@
     </tr>
 
 
-    @foreach (var item in (List<Items>)Session["cartp"])
+    @foreach (var item in (List<Items>)Session["cart"])
     {
         <tr>
             <td>@item.Product.Pro_Name</td>
@@ -26,11 +26,11 @@
             <td>
                 |
                 @*@Html.ActionLink("Items", "Delete", new { id = item.Product.Pro_id })*@
-                <button onclick="location.href='@Url.Action("Items","Delete", new {id=item.Product.Pro_id})'"></button>
-                <button onclick="location.href='@Url.Action("Items","Add", new {id=item.Product.Pro_id })'"></button>
+                <button onclick="location.href='@Url.Action("Items","Add", new {id=item.Product.Pro_id})'">Delete</button>
+                <button onclick="location.href='@Url.Action("Items","Add", new {id=item.Product.Pro_id })'">Add Quauntity</button>
             </td>
         </tr>
-        @total += (item.Quantity * item.Product.Pro_price);
+        total += Convert.ToDecimal(item.Quantity * item.Product.Pro_price);
 
     }
 </table>
